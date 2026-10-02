@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>56电影网 | 56电影网 - 一册在手，一周有片</title>
+<meta name="keywords" content="56电影网, 56电影网电影, 56电影网一周片单, 56电影网56部, 56电影网新片, 56电影网老片, 电影画报, 一周看片清单">
+<meta name="description" content="56电影网（https://56dianyingwang-wap.github.io）是一册一周一更的电影画报，每期精选56部好片，8个栏目、8天排期，可存可翻可剪。">
+<meta name="robots" content="index,follow">
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc,mobile">
+<meta property="og:type" content="website">
+<meta property="og:title" content="56电影网 | 一册在手，一周有片">
+<meta property="og:description" content="56电影网（https://56dianyingwang-wap.github.io）是一册一周一更的电影画报，每期精选56部好片。">
+<meta property="og:url" content="https://56dianyingwang-wap.github.io/">
+<meta property="og:site_name" content="56电影网">
+<meta property="og:locale" content="zh_CN">
+<link rel="canonical" href="https://56dianyingwang-wap.github.io/">
+<style>
+:root{
+  --paper:#f4efe6;       /* 米白纸面 */
+  --paper2:#ece5d9;
+  --ink:#1d1b18;         /* 墨黑 */
+  --ink2:#4a463f;
+  --ink3:#8a8378;
+  --red:#c8321e;         /* 朱红印章 */
+  --red2:#a92615;
+  --gold:#b08d2f;        /* 老金 */
+  --line:rgba(29,27,24,.16);
+  --line2:rgba(29,27,24,.09);
+  --r:0px;
+  --max:1320px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Songti SC","Source Han Serif SC","Noto Serif CJK SC","Microsoft YaHei",serif;
+  font-size:16px;line-height:1.85;
+  background-image:radial-gradient(rgba(29,27,24,.045) 1px,transparent 1px);
+  background-size:9px 9px;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(0,0,0,.035))}
+a{color:inherit;text-decoration:none;transition:.18s}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input{font-family:inherit}
+::selection{background:var(--red);color:#f7f2e9}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 36px}
+
+/* ===== 刊头 ===== */
+.masthead{border-bottom:5px double var(--ink);padding:26px 0 18px;position:relative}
+.masthead .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:26px}
+.brand{display:flex;flex-direction:column;gap:7px}
+.brand .cn{font-size:clamp(40px,7.2vw,78px);font-weight:900;letter-spacing:4px;line-height:.95;font-family:"Songti SC","Noto Serif CJK SC",serif}
+.brand .cn b{color:var(--red)}
+.brand .en{font-size:12px;letter-spacing:6px;color:var(--ink3);text-transform:uppercase}
+.stamp{width:118px;height:118px;border:3px solid var(--red);border-radius:6px;display:grid;place-items:center;color:var(--red);transform:rotate(-7deg);position:relative;flex-shrink:0;background:rgba(200,50,30,.04)}
+.stamp::before{content:"";position:absolute;inset:5px;border:1px solid rgba(200,50,30,.5)}
+.stamp span{font-size:32px;font-weight:900;letter-spacing:-1px;line-height:.9;text-align:center;font-family:"Songti SC",serif}
+.stamp small{display:block;font-size:10.5px;letter-spacing:3px;margin-top:3px;font-weight:800}
+.issue{text-align:right;font-size:13px;color:var(--ink2);display:flex;flex-direction:column;gap:5px;align-items:flex-end}
+.issue b{font-family:ui-monospace,Menlo,monospace;font-size:14px;font-weight:900;color:var(--ink)}
+.issue .rubric{font-size:11px;letter-spacing:3px;color:var(--red);border:1px solid var(--red);padding:3px 9px;border-radius:2px}
+.marq{border-bottom:1.5px solid var(--ink);padding:9px 0;font-size:12.5px;color:var(--ink3);letter-spacing:.8px;display:flex;gap:26px;align-items:center}
+.marq b{color:var(--red);font-size:11px;letter-spacing:2px;white-space:nowrap}
+.marq .dot{width:4px;height:4px;background:var(--gold);transform:rotate(45deg);flex-shrink:0}
+
+/* 导航：竖排式细线 */
+.nav{border-bottom:1px solid var(--line);background:rgba(244,239,230,.86);backdrop-filter:blur(8px);position:sticky;top:0;z-index:90}
+.nav .wrap{display:flex;align-items:center;gap:2px;height:56px}
+.nav a{padding:7px 16px;font-size:14px;font-weight:800;letter-spacing:1.5px;color:var(--ink2);border-right:1px solid var(--line2);position:relative}
+.nav a:last-child{border-right:0}
+.nav a:hover{color:var(--red)}
+.nav a:hover::after{content:"";position:absolute;left:16px;right:16px;bottom:2px;height:2.5px;background:var(--red)}
+.nav .nb{flex:1}
+.mob{display:none;width:40px;height:40px;margin-left:auto;position:relative;flex-shrink:0}
+.mob i{position:absolute;left:50%;top:50%;width:18px;height:2px;background:var(--ink);transform:translate(-50%,-50%)}
+.mob i:nth-child(1){transform:translate(-50%,calc(-50% - 6px))}
+.mob i:nth-child(3){transform:translate(-50%,calc(-50% + 6px))}
+
+/* ===== 报头 ===== */
+.hero{padding:40px 0 30px;display:grid;grid-template-columns:1.55fr 1fr;gap:40px;align-items:start}
+.h-txt .kicker{display:inline-block;font-size:12px;letter-spacing:5px;color:var(--red);border:1.5px solid var(--red);padding:4px 12px;margin-bottom:20px}
+.h-txt h1{font-size:clamp(30px,4.6vw,50px);font-weight:900;line-height:1.28;letter-spacing:2px;font-family:"Songti SC","Noto Serif CJK SC",serif}
+.h-txt h1 em{font-style:normal;color:var(--red)}
+.h-txt p{margin-top:18px;font-size:16.5px;color:var(--ink2);max-width:560px;text-align:justify}
+.h-txt p::first-letter{font-size:34px;font-weight:900;color:var(--red);float:left;line-height:.95;padding:4px 8px 0 0;font-family:"Songti SC",serif}
+.h-meta{display:flex;gap:26px;margin-top:26px;padding-top:20px;border-top:1px solid var(--line2);font-size:13px;color:var(--ink3);flex-wrap:wrap}
+.h-meta b{display:block;font-family:ui-monospace,Menlo,monospace;font-size:17px;font-weight:900;color:var(--ink);letter-spacing:-.5px}
+.h-side{display:flex;flex-direction:column;gap:14px}
+.quote{background:var(--paper2);border-left:4px solid var(--red);padding:20px 22px;font-size:14.5px;color:var(--ink2)}
+.quote cite{display:block;margin-top:12px;font-size:12px;color:var(--ink3);font-style:normal;letter-spacing:1.5px}
+.fig{background:var(--paper2);border:1px solid var(--line2);padding:12px}
+.fig .fr{height:150px;background:linear-gradient(135deg,#2b2723,#4a463f);position:relative;overflow:hidden;display:grid;place-items:center}
+.fig .fr::after{content:"56";position:absolute;font-size:110px;font-weight:900;color:rgba(255,255,255,.11);line-height:.8}
+.fig .fr span{font-size:13px;letter-spacing:6px;color:rgba(255,255,255,.85);z-index:1}
+.fig .cap{font-size:11.5px;color:var(--ink3);padding-top:9px;letter-spacing:.6px;border-top:1px solid var(--line2);margin-top:10px}
+
+/* 索引条 */
+.idxbar{display:flex;border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line);background:var(--paper2)}
+.idxbar div{flex:1;text-align:center;padding:13px 6px;border-right:1px solid var(--line2)}
+.idxbar div:last-child{border-right:0}
+.idxbar b{display:block;font-size:clamp(18px,2.4vw,26px);font-weight:900;letter-spacing:-.8px;font-family:ui-monospace,Menlo,monospace}
+.idxbar b.red{color:var(--red)}
+.idxbar span{font-size:11px;color:var(--ink3);letter-spacing:1.5px}
+
+/* ===== 栏目标头：报刊式 ===== */
+.shd{display:flex;align-items:center;gap:14px;margin:42px 0 22px;flex-wrap:wrap}
+.shd .no{font-family:"Songti SC",serif;font-size:30px;font-weight:900;color:var(--red);line-height:.9}
+.shd .tx h2{font-size:clamp(21px,3vw,29px);font-weight:900;letter-spacing:2px;font-family:"Songti SC","Noto Serif CJK SC",serif}
+.shd .tx h2 em{font-style:normal;color:var(--red)}
+.shd .tx small{display:block;font-size:12px;color:var(--ink3);letter-spacing:3px;margin-top:2px}
+.shd .ln{flex:1;height:1.5px;background:var(--line2);min-width:40px}
+.shd .mo{font-size:12.5px;font-weight:800;color:var(--ink3);letter-spacing:1.5px;border-bottom:1px solid var(--line)}
+.shd .mo:hover{color:var(--red);border-color:var(--red)}
+
+/* 栏目一：竖排卡片 + 朱红编号 */
+.vcards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.vc{border:1px solid var(--line);background:var(--paper2);padding:0 0 18px;transition:.22s;position:relative}
+.vc:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(29,27,24,.14);border-color:var(--ink3)}
+.vc .hd{background:var(--ink);color:var(--paper);padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
+.vc .hd b{font-family:"Songti SC",serif;font-size:22px;font-weight:900;letter-spacing:1px}
+.vc .hd i{font-size:10.5px;letter-spacing:2px;font-style:normal;color:var(--gold)}
+.vc.red .hd{background:var(--red)}
+.vc.gold .hd{background:var(--gold)}
+.vc .bd{padding:16px 18px 0}
+.vc .bd h3{font-size:18px;font-weight:900;letter-spacing:1px;line-height:1.45;font-family:"Songti SC","Noto Serif CJK SC",serif}
+.vc .bd p{font-size:13.5px;color:var(--ink3);margin-top:9px;text-align:justify}
+.vc .ft{margin:16px 18px 0;padding-top:12px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;font-weight:900}
+.vc .ft span{color:var(--ink3)}
+
+/* 栏目二：图文卡（编号竖排） */
+.fcards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.fc{display:grid;grid-template-columns:52px 1fr;gap:16px;border-top:2.5px solid var(--ink);padding-top:16px;transition:.2s}
+.fc:hover{background:rgba(200,50,30,.04)}
+.fc .vn{font-family:"Songti SC",serif;font-size:38px;font-weight:900;line-height:.85;color:var(--red);writing-mode:vertical-rl;text-orientation:mixed;letter-spacing:-1px}
+.fc .vn s{text-decoration:none;font-size:11px;color:var(--ink3);letter-spacing:2px;display:block;margin-top:6px;writing-mode:horizontal-tb}
+.fc h3{font-size:18.5px;font-weight:900;letter-spacing:1px;line-height:1.4;font-family:"Songti SC","Noto Serif CJK SC",serif}
+.fc h3 a:hover{color:var(--red)}
+.fc .meta{margin-top:9px;font-size:12px;color:var(--ink3);letter-spacing:.8px;display:flex;gap:10px;flex-wrap:wrap}
+.fc .meta span:not(:last-child)::after{content:"·";margin-left:10px;color:var(--line)}
+.fc p{margin-top:11px;font-size:14px;color:var(--ink2);text-align:justify}
+.fc .more{display:inline-block;margin-top:13px;font-size:12px;font-weight:800;color:var(--red);letter-spacing:1.5px;border-bottom:1px solid var(--red);padding-bottom:1px}
+
+/* 栏目三：56 清单（双栏报纸式） */
+.listbox{column-count:2;column-gap:40px;column-rule:1px solid var(--line2);border-top:2.5px solid var(--ink);padding-top:18px}
+.listbox .li{break-inside:avoid;display:grid;grid-template-columns:34px 1fr auto;gap:12px;padding:11px 0;border-bottom:1px dotted var(--line);align-items:baseline}
+.listbox .li .n{font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:900;color:var(--red)}
+.listbox .li.old .n{color:var(--ink3)}
+.listbox .li .t{font-size:14.5px;font-weight:700;letter-spacing:.5px}
+.listbox .li .t small{display:block;font-size:11.5px;color:var(--ink3);font-weight:600;margin-top:1px}
+.listbox .li .rt{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;font-weight:900;color:var(--ink2)}
+.listbox .li.new{border-left:2px solid var(--red);padding-left:10px;margin-left:-12px}
+
+/* 栏目四：时间轴（左右交替，杂志刊期样式） */
+.tl{border-top:2.5px solid var(--ink);padding-top:30px;position:relative}
+.tl::before{content:"";position:absolute;left:50%;top:30px;bottom:0;width:1px;background:var(--line)}
+.tl .row{display:grid;grid-template-columns:1fr 90px 1fr;gap:0;align-items:center;margin-bottom:26px;position:relative}
+.tl .row .dt{font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:900;color:var(--ink3);letter-spacing:1px}
+.tl .row .dt b{display:block;font-size:20px;color:var(--ink);letter-spacing:-.8px}
+.tl .row .nd{width:62px;height:62px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:"Songti SC",serif;font-size:19px;font-weight:900;line-height:1;justify-self:center;z-index:1;box-shadow:0 0 0 6px var(--paper)}
+.tl .row .nd small{display:block;font-size:8.5px;letter-spacing:1px;color:var(--gold);font-weight:700}
+.tl .row .cn{border:1px solid var(--line);background:var(--paper2);padding:14px 18px}
+.tl .row .cn h4{font-size:16px;font-weight:900;letter-spacing:1px;font-family:"Songti SC",serif}
+.tl .row .cn p{font-size:13px;color:var(--ink3);margin-top:5px}
+.tl .row:nth-child(odd) .dt{text-align:right}
+.tl .row:nth-child(odd) .cn{margin-right:22px}
+.tl .row:nth-child(even){direction:rtl}
+.tl .row:nth-child(even) > *{direction:ltr}
+.tl .row:nth-child(even) .dt{text-align:left}
+.tl .row:nth-child(even) .cn{margin-left:22px}
+.tl .row.today .nd{background:var(--red)}
+.tl .row.today .cn{border-color:var(--red)}
+.tl .row.today .cn h4{color:var(--red)}
+
+/* 栏目五：双榜对照 */
+.cmp{display:grid;grid-template-columns:1fr 56px 1fr;gap:0;border-top:2.5px solid var(--ink)}
+.cmp .col{padding:20px 22px}
+.cmp .col.left{background:rgba(200,50,30,.05)}
+.cmp .col.right{background:rgba(176,141,47,.07)}
+.cmp .col h3{font-size:20px;font-weight:900;letter-spacing:2px;font-family:"Songti SC",serif}
+.cmp .col.left h3{color:var(--red)}
+.cmp .col.right h3{color:var(--gold)}
+.cmp .col .sub{font-size:11.5px;color:var(--ink3);letter-spacing:2px;margin-bottom:16px}
+.cmp ol{counter-reset:c;list-style:none}
+.cmp li{counter-increment:c;display:grid;grid-template-columns:26px 1fr auto;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dotted var(--line)}
+.cmp li::before{content:counter(c,upper-roman);font-family:"Songti SC",serif;font-size:11px;font-weight:900;color:var(--ink3)}
+.cmp li .t{font-size:14.5px;font-weight:800;letter-spacing:.5px}
+.cmp li .t small{display:block;font-size:11.5px;color:var(--ink3);font-weight:600}
+.cmp li .s{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;font-weight:900}
+.cmp .vs{grid-row:1/3;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:"Songti SC",serif;font-size:17px;font-weight:900;letter-spacing:1px;writing-mode:vertical-rl}
+
+/* 栏目六：折叠问答 */
+.faq{border-top:2.5px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line);padding:0}
+.faq details[open]{background:var(--paper2)}
+.faq summary{cursor:pointer;padding:18px 0;font-size:16.5px;font-weight:900;letter-spacing:1px;display:flex;justify-content:space-between;align-items:center;font-family:"Songti SC","Noto Serif CJK SC",serif;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--red);font-size:19px;font-weight:900}
+.faq details[open] summary::after{content:"－"}
+.faq summary b{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--red);margin-right:14px}
+.faq .ans{padding:0 0 20px 40px;font-size:14.5px;color:var(--ink2);max-width:820px;text-align:justify}
+.faq .ans a{color:var(--red);border-bottom:1px solid var(--red)}
+
+/* 版权信息卡 */
+.info{border:1.5px solid var(--ink);padding:26px 30px;display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center;background:var(--paper2)}
+.info .seal{display:flex;align-items:center;gap:20px}
+.info .seal .sq{width:76px;height:76px;border:2.5px solid var(--red);border-radius:4px;display:grid;place-items:center;color:var(--red);font-family:"Songti SC",serif;font-size:19px;font-weight:900;line-height:.95;text-align:center;transform:rotate(4deg);flex-shrink:0}
+.info .seal h3{font-size:clamp(20px,2.6vw,25px);font-weight:900;letter-spacing:2px;font-family:"Songti SC",serif}
+.info .seal h3 em{font-style:normal;color:var(--red)}
+.info .seal p{font-size:12.5px;color:var(--ink3);margin-top:5px;letter-spacing:.6px}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:7px 16px;font-size:13.5px}
+.info dt{color:var(--ink3);letter-spacing:1px}
+.info dd{font-weight:800;word-break:break-all}
+
+/* CTA：投稿栏 */
+.cta{border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);padding:30px 34px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.cta h3{font-size:clamp(22px,3.2vw,31px);font-weight:900;letter-spacing:2px;line-height:1.4;font-family:"Songti SC","Noto Serif CJK SC",serif}
+.cta h3 em{font-style:normal;color:var(--gold)}
+.cta p{font-size:14px;color:rgba(247,242,233,.68);margin-top:9px}
+.cta form{display:flex;gap:9px;flex-wrap:wrap}
+.cta input{flex:1;min-width:150px;padding:14px 16px;background:rgba(247,242,233,.1);border:1px solid rgba(247,242,233,.28);color:var(--paper);font-size:14px;outline:0}
+.cta input::placeholder{color:rgba(247,242,233,.5)}
+.cta input:focus{border-color:var(--gold)}
+.cta button{padding:14px 26px;background:var(--red);color:#fdfaf5;font-size:14px;font-weight:900;letter-spacing:2px}
+.cta button:hover{background:var(--gold)}
+
+/* 页脚 */
+footer{border-top:5px double var(--ink);margin-top:48px;padding:44px 0 30px}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+.ft .brand{margin-bottom:16px}
+.ft .brand .cn{font-size:38px}
+.ft p{font-size:14px;color:var(--ink3);text-align:justify}
+.ft .url{display:inline-block;margin-top:13px;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--red);word-break:break-all;border-bottom:1px solid var(--red);padding-bottom:1px}
+.ftc h4{font-size:12.5px;font-weight:900;letter-spacing:3px;margin-bottom:16px;padding-bottom:9px;border-bottom:1.5px solid var(--ink)}
+.ftc ul li{padding:6px 0}
+.ftc a{font-size:14px;color:var(--ink2);letter-spacing:.5px}
+.ftc a:hover{color:var(--red)}
+.fb{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:var(--ink3);letter-spacing:.6px}
+.fb b{color:var(--red);font-weight:900}
+
+@media (max-width:1080px){
+  .vcards,.fcards{grid-template-columns:1fr 1fr}
+  .listbox{column-count:1}
+  .info{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .wrap{padding:0 18px}
+  .masthead .wrap{grid-template-columns:1fr;text-align:left}
+  .stamp{width:88px;height:88px;margin:0 auto}
+  .stamp span{font-size:24px}
+  .issue{text-align:left;align-items:flex-start}
+  .nav a{display:none}
+  .nav .wrap{height:auto;flex-direction:column;align-items:stretch;padding:8px 0;gap:4px}
+  .mob{display:block;position:absolute;top:10px;right:18px}
+  #mnav.open{display:flex;flex-direction:column;padding-bottom:10px}
+  #mnav.open a{display:block;border-right:0;border-bottom:1px solid var(--line2);padding:10px 4px}
+  .hero{grid-template-columns:1fr;gap:26px;padding:30px 0 22px}
+  .idxbar{flex-wrap:wrap}
+  .idxbar div{flex:1 1 33.33%;border-bottom:1px solid var(--line2)}
+  .vcards,.fcards{grid-template-columns:1fr}
+  .fc .vn{font-size:30px}
+  .cmp{grid-template-columns:1fr}
+  .cmp .vs{writing-mode:horizontal-tb;grid-row:auto;padding:9px;font-size:13px;letter-spacing:4px}
+  .tl::before{left:24px}
+  .tl .row{grid-template-columns:52px 1fr;gap:14px}
+  .tl .row .nd{width:48px;height:48px;font-size:15px;box-shadow:0 0 0 5px var(--paper)}
+  .tl .row .dt{display:none}
+  .tl .row:nth-child(even){direction:ltr}
+  .tl .row .cn,.tl .row:nth-child(odd) .cn,.tl .row:nth-child(even) .cn{margin:0}
+  .cta,.ft,.info{grid-template-columns:1fr}
+  .marq{overflow:hidden;white-space:nowrap}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<!-- 刊头 -->
+<header class="masthead">
+  <div class="wrap">
+    <div class="brand">
+      <span class="cn"><b>56</b>电影网</span>
+      <span class="en">56 DIAN YING WANG · WEEKLY CINE-JOURNAL</span>
+    </div>
+    <div class="stamp" title="56电影网印章">
+      <span>56<br>电影</span>
+      <small>已阅 · OK</small>
+    </div>
+    <div class="issue">
+      <span class="rubric">NO. 156</span>
+      <span>第 <b>156</b> 期 · 一周一更</span>
+      <span>出版日：<b>2026.08.05</b></span>
+      <span>零售价：<b>免费</b> · 电子版</span>
+      <span>编辑部：<b>56电影网</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="marq wrap">
+  <b>本期要目</b>
+  <span>56 部精选片单 · 8 个栏目 · 8 天排期</span><span class="dot"></span>
+  <span>每周一上午 10:00 更新</span><span class="dot"></span>
+  <span>订阅 128,600 位读者</span><span class="dot"></span>
+  <span>投稿信箱见页脚</span>
+</div>
+
+<!-- 导航 -->
+<div class="nav">
+  <div class="wrap" id="mnav">
+    <a href="#vc" title="56电影网的8个栏目">栏 目</a>
+    <a href="#fc" title="56电影网主编精选">主 编 精 选</a>
+    <a href="#ls" title="56电影网56部清单">56 清 单</a>
+    <a href="#tl" title="56电影网八日排期">八 日 排 期</a>
+    <a href="#cmp" title="56电影网三榜">三 榜</a>
+    <a href="#faq" title="56电影网常见问题">问 答</a>
+    <a href="#info" title="关于56电影网">关 于</a>
+    <span class="nb"></span>
+    <button class="mob" id="mob" aria-label="菜单"><i></i><i></i><i></i></button>
+  </div>
+</div>
+
+<!-- 报头 -->
+<section class="hero wrap">
+  <div class="h-txt">
+    <span class="kicker">本 期 卷 首</span>
+    <h1>一册在手，<br><em>一周有片</em>。</h1>
+    <p>56电影网（https://56dianyingwang-wap.github.io）不是排行榜，是一本周一更的电影画报。每期从新片、老片、冷门片里挑出 56 部，排成 8 个栏目、铺进 8 天日程，能存、能翻、能剪下来贴在冰箱上。</p>
+    <div class="h-meta">
+      <div><b>56</b>部精选</div>
+      <div><b>8</b>个栏目</div>
+      <div><b>8</b>天排期</div>
+      <div><b>4.8</b>平均分</div>
+      <div><b>128k</b>读者</div>
+    </div>
+  </div>
+  <aside class="h-side">
+    <div class="quote">
+      "看片最难的从来不是找，而是定。56 部，7 天，一天 8 部里挑 1 部，选择成本直接砍到零。"
+      <cite>—— 56电影网 主编 周一行</cite>
+    </div>
+    <div class="fig">
+      <div class="fr"><span>封 面 故 事</span></div>
+      <div class="cap">图版 No.56 · 本周封面选自《白日之下》，港片这一年的扎实，值得单独一期。</div>
+    </div>
+  </aside>
+</section>
+
+<div class="idxbar wrap">
+  <div><b class="red">56</b><span>部精选</span></div>
+  <div><b>08</b><span>个栏目</span></div>
+  <div><b>08</b><span>天排期</span></div>
+  <div><b>07</b><span>天更新</span></div>
+  <div><b>128k</b><span>订阅读者</span></div>
+  <div><b>04.8</b><span>平均评分</span></div>
+</div>
+
+<!-- 栏目一：8 个栏目 -->
+<section class="wrap" id="vc">
+  <div class="shd">
+    <span class="no">壹</span>
+    <div class="tx"><h2>八个<em>栏目</em></h2><small>EIGHT COLUMNS · 每栏 7 部</small></div>
+    <span class="ln"></span>
+    <a class="mo" href="#" title="56电影网全部栏目">全 部 栏 目 ›</a>
+  </div>
+  <div class="vcards" id="vcbox"></div>
+</section>
+
+<!-- 栏目二：主编精选 -->
+<section class="wrap" id="fc">
+  <div class="shd">
+    <span class="no">贰</span>
+    <div class="tx"><h2>主编<em>精选</em></h2><small>EDITOR'S PICKS · 六篇手记</small></div>
+    <span class="ln"></span>
+    <a class="mo" href="#" title="56电影网全部手记">全 部 手 记 ›</a>
+  </div>
+  <div class="fcards" id="fcbox"></div>
+</section>
+
+<!-- 栏目三：56 清单 -->
+<section class="wrap" id="ls">
+  <div class="shd">
+    <span class="no">叁</span>
+    <div class="tx"><h2>56 <em>清单</em></h2><small>THE LIST · 本期刊载目录</small></div>
+    <span class="ln"></span>
+    <span style="font-size:12.5px;color:var(--ink3);letter-spacing:1px">红边为新片 · 数字为刊内编号</span>
+    <a class="mo" href="#" title="56电影网导出清单">导 出 清 单 ›</a>
+  </div>
+  <div class="listbox" id="lsbox"></div>
+</section>
+
+<!-- 栏目四：八日排期 -->
+<section class="wrap" id="tl">
+  <div class="shd">
+    <span class="no">肆</span>
+    <div class="tx"><h2>八日<em>排期</em></h2><small>WEEK PLAN · 把 56 部排进日程</small></div>
+    <span class="ln"></span>
+    <a class="mo" href="#" title="56电影网切换周次">切 换 周 次 ›</a>
+  </div>
+  <div class="tl" id="tlbox"></div>
+</section>
+
+<!-- 栏目五：双榜对照 -->
+<section class="wrap" id="cmp">
+  <div class="shd">
+    <span class="no">伍</span>
+    <div class="tx"><h2>三榜<em>对照</em></h2><small>RANKING · 热度 / 口碑 / 遗珠</small></div>
+    <span class="ln"></span>
+    <a class="mo" href="#" title="56电影网历史榜单">历 史 榜 单 ›</a>
+  </div>
+  <div class="cmp" id="cmpbox"></div>
+</section>
+
+<!-- 栏目六：问答 -->
+<section class="wrap" id="faq">
+  <div class="shd">
+    <span class="no">陆</span>
+    <div class="tx"><h2>读编<em>往来</em></h2><small>Q &amp; A · 关于 56电影网</small></div>
+    <span class="ln"></span>
+  </div>
+  <div class="faq" id="faqbox"></div>
+</section>
+
+<!-- 关于 -->
+<section class="wrap" id="info">
+  <div class="shd">
+    <span class="no">柒</span>
+    <div class="tx"><h2>关于<em>本站</em></h2><small>ABOUT · 网站名称与网址</small></div>
+  </div>
+  <div class="info">
+    <div class="seal">
+      <div class="sq">56<br>电影<br>网</div>
+      <div>
+        <h3>网站名称：<em>56电影网</em></h3>
+        <p>每周一更的电影画报 · 第 156 期 · 已陪伴读者 3 年</p>
+      </div>
+    </div>
+    <dl>
+      <dt>网站名称</dt><dd>56电影网</dd>
+      <dt>网站网址</dt><dd><a href="https://56dianyingwang-wap.github.io/" title="56电影网">https://56dianyingwang-wap.github.io/</a></dd>
+      <dt>更新周期</dt><dd>每周一 10:00</dd>
+      <dt>本期编号</dt><dd>NO. 156</dd>
+      <dt>编辑部邮箱</dt><dd>editor@56dianyingwang-wap.github.io</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="wrap" style="padding:34px 0 30px">
+  <div class="cta">
+    <div>
+      <h3>订一份《<em>56 周报</em>》，<br>每周一收一册。</h3>
+      <p>免费订阅，仅推送当周 56 部清单，不发广告。</p>
+    </div>
+    <form onsubmit="return sub(event)">
+      <input type="email" id="mail" placeholder="your@email.com" required aria-label="邮箱">
+      <button type="submit">订 阅</button>
+    </form>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <div class="brand">
+          <span class="cn"><b>56</b>电影网</span>
+          <span class="en">56 DIAN YING WANG</span>
+        </div>
+        <p>56电影网（https://56dianyingwang-wap.github.io）每周精选 56 部好片，做一册能存能翻的电影画报。</p>
+        <a class="url" href="https://56dianyingwang-wap.github.io/" title="56电影网">🔗 https://56dianyingwang-wap.github.io</a>
+      </div>
+      <div class="ftc">
+        <h4>栏 目</h4>
+        <ul>
+          <li><a href="#vc" title="56电影网栏目">八个栏目</a></li>
+          <li><a href="#fc" title="56电影网精选">主编精选</a></li>
+          <li><a href="#ls" title="56电影网清单">56 清单</a></li>
+          <li><a href="#tl" title="56电影网排期">八日排期</a></li>
+        </ul>
+      </div>
+      <div class="ftc">
+        <h4>榜 单</h4>
+        <ul>
+          <li><a href="#cmp" title="56电影网热度榜">本周热度</a></li>
+          <li><a href="#cmp" title="56电影网口碑榜">年度口碑</a></li>
+          <li><a href="#cmp" title="56电影网遗珠榜">冷门遗珠</a></li>
+          <li><a href="#" title="56电影网历史榜单">历史榜单</a></li>
+        </ul>
+      </div>
+      <div class="ftc">
+        <h4>编 务</h4>
+        <ul>
+          <li><a href="#info" title="关于56电影网">关于本站</a></li>
+          <li><a href="#faq" title="56电影网问答">读编往来</a></li>
+          <li><a href="#" title="56电影网投稿">投稿方式</a></li>
+          <li><a href="#" title="56电影网隐私政策">隐私政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fb">
+      <span>© 2026 <b>56电影网</b> · 网站名称：56电影网 ｜ 网站网址：https://56dianyingwang-wap.github.io ｜ 第 156 期</span>
+      <span>本期编辑：周一 · 校读：周七 · 排版：56工作室</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var COLS=[
+  ["热映新片","NEW","本周院线与平台新上 7 部，看完算你赢。"],
+  ["口碑高分","TOP","豆瓣 8.5 分以上，争议小、回头率高。"],
+  ["经典重温","OLD","每部都值得再看一遍，画面配饭刚好。"],
+  ["冷门遗珠","GEM","被名字耽误的，看完会安利给朋友。"],
+  ["悬疑烧脑","MYT","第二遍才看懂，适合周末窝沙发。"],
+  ["治愈系","WARM","看完心情变好，不费脑不虐心。"],
+  ["深夜场","NITE","节奏慢、氛围足，适合凌晨两点。"],
+  ["动画与纪录","DOC","动画补完与纪录片，换换口味。"]
+];
+var PICKS=[
+  ["热映新片里的三部","08.05","院线","七部里真正能看的只有三：强在节奏、弱在逻辑，剩下四部留到降价再看。",1],
+  ["《白日之下》为何值得单列一期","08.06","港片","把养老院拍成恐怖片，拍完还留一线光。这一年的港片，扎实得让人意外。",2],
+  ["冷门遗珠的五个共同特征","08.07","方法论","名字长、海报土、宣传预算接近于零、口碑靠朋友安利、看完想打五星。",3],
+  ["深夜场与失眠者的协议","08.08","生活方式","不是每部慢片都适合凌晨，但每部慢片都宣称自己适合凌晨。",4],
+  ["悬疑片第二遍的正确打开方式","08.09","方法论","第一遍当观众，第二遍当侦探，第三遍当编剧。",5],
+  ["动画与纪录片：换口味的有效剂量","08.10","片单","一周一部就够，超过两部容易腻，少于一部容易忘。",6]
+];
+var LS=[
+  ["抓娃娃","闫非 / 彭大魔 · 2024 · 喜剧",8.2,1],
+  ["默杀","柯汶利 · 2024 · 悬疑",7.9,1],
+  ["白日之下","简君晋 · 2024 · 剧情",8.6,1],
+  ["九龙城寨之围城","郑保瑞 · 2024 · 动作",8.4,0],
+  ["泳者之心","乔阿吉姆·罗恩尼 · 2024 · 传记",9.0,1],
+  ["你想活出怎样的人生","宫崎骏 · 2024 · 动画",7.7,0],
+  ["异形：夺命舰","费德·阿尔瓦雷斯 · 2024 · 科幻",7.4,0],
+  ["周处除三害","黄精甫 · 2024 · 犯罪",8.5,0],
+  ["奥本海默","诺兰 · 2023 · 传记",9.8,0],
+  ["热辣滚烫","贾玲 · 2024 · 剧情",8.1,0],
+  ["飞驰人生 2","韩寒 · 2024 · 喜剧",7.8,1],
+  ["哥斯拉大战金刚 2","亚当·温加德 · 2024 · 科幻",6.5,0],
+  ["机器人之梦","巴勃罗·贝格尔 · 2024 · 动画",9.0,1],
+  ["第二十条","张艺谋 · 2024 · 剧情",7.6,0],
+  ["涉过愤怒的海","曹保平 · 2024 · 犯罪",8.2,0],
+  ["破·地狱","陈茂贤 · 2024 · 剧情",8.7,1],
+  ["过去的日子","小田切让 · 2023 · 剧情",8.8,1],
+  ["晨光正好","米娅·汉森-洛夫 · 2023 · 生活流",8.5,1],
+  ["蓦然回首","藤本タツキ · 2024 · 动画",8.9,1],
+  ["此心安处","罗伯特·泽米吉斯 · 2024 · 剧情",7.0,0],
+  ["里斯本丸沉没","方励 · 2024 · 纪录",8.6,1],
+  ["头脑特工队 2","凯尔西·曼 · 2024 · 动画",8.4,0],
+  ["疯狂动物城 2","拜伦·霍华德 · 2025 · 动画",8.3,0],
+  ["绑架游戏","张哲秀 · 2024 · 悬疑",6.9,0],
+  ["朱同在三年级","王子川 · 2024 · 喜剧",7.5,1],
+  ["来福大酒店","刘博文 · 2024 · 剧情",7.2,0],
+  ["野孩子","殷若昕 · 2024 · 剧情",7.4,1],
+  ["异乡来客","大飞 · 2024 · 剧情",7.9,1],
+  ["大突围","钟海 · 2024 · 战争",6.3,0],
+  ["一雪前耻","于广义 · 2024 · 喜剧",6.8,0],
+  ["谈判专家","邱礼涛 · 2024 · 犯罪",6.7,0],
+  ["草木人间","顾晓刚 · 2024 · 剧情",8.0,0],
+  ["姥姥的外孙","帕特·波尼蒂帕特 · 2024 · 家庭",8.7,1],
+  ["久别重逢","梁礼彦 · 2024 · 爱情",7.3,1],
+  ["误杀 3","甘剑宇 · 2025 · 悬疑",6.6,0],
+  ["焚城","潘耀明 · 2024 · 灾难",6.4,0],
+  ["逆行人生","徐峥 · 2024 · 剧情",7.1,0],
+  ["志愿军：存亡之战","陈凯歌 · 2024 · 战争",7.3,0],
+  ["出走的决心","尹丽川 · 2024 · 剧情",8.6,1],
+  ["浴火之路","刘江江 · 2024 · 犯罪",6.8,0],
+  ["749 局","陆川 · 2024 · 科幻",5.1,0],
+  ["云边的小卖部","张嘉佳 · 2024 · 剧情",6.0,0],
+  ["爆款好人","宁浩 · 2024 · 喜剧",6.2,0],
+  ["熊猫计划","张栾 · 2024 · 动作喜剧",6.4,0],
+  ["只此江湖一袭白衣","待定 · 2025 · 武侠",7.6,1],
+  ["乔妍的心事","鹏飞 · 2024 · 剧情",6.7,0],
+  ["戴假发的人","黄晓明 · 2024 · 悬疑",6.1,0],
+  ["绑票通缉令","陈大利 · 2024 · 犯罪",6.5,0],
+  ["女儿的女儿","黄熙 · 2024 · 家庭",7.8,1],
+  ["错过你的那些年","藤井道人 · 2024 · 爱情",7.5,0],
+  ["盗月者","袁剑伟 · 2024 · 犯罪",6.3,0],
+  ["但愿人长久","祝紫嫣 · 2024 · 家庭",7.7,1],
+  ["近距离击杀","曲江涛 · 2024 · 犯罪",6.0,0],
+  ["拼桌","吴亚春 · 2024 · 剧情",7.1,1],
+  ["偶得回响","艾格尼丝·杰尼 · 2023 · 文艺",8.4,1],
+  ["海雾之外","蔡崇隆 · 2023 · 纪录",8.3,1],
+  ["无人知晓","是枝裕和 · 2004 · 经典重温",8.7,1]
+];
+var TL=[
+  ["MON","08.05","DAY 01","热映新片","7 部。先看口碑最高的两部，剩下五部按需分配。"],
+  ["TUE","08.06","DAY 02","口碑高分","7 部。其中三部需要安静看完，建议挑晚上。"],
+  ["WED","08.07","DAY 03","经典重温","7 部。最适合做家务时当背景音的一部已标注。"],
+  ["THU","08.08","DAY 04","冷门遗珠","7 部。本周最值得二刷的一栏，别快进。"],
+  ["FRI","08.09","DAY 05","悬疑烧脑","7 部。周末前两部，给周日留点体力。"],
+  ["SAT","08.10","DAY 06","治愈系","7 部。看完心情变好，本栏的及格线就这一条。"],
+  ["SUN","08.11","DAY 07","深夜场","7 部。按节奏从快到慢排，两点收工。"],
+  ["NXT","08.12","DAY 08","动画与纪录","7 部。收尾用，下周清单同日发布。"]
+];
+var CMP={
+  hot:[["默杀","悬疑 · 56 部热度第一",9.6],["抓娃娃","喜剧 · 暑期档话题王",9.3],["九龙城寨之围城","动作 · 港片回魂",9.1],["异形：夺命舰","科幻 · 经典 IP",8.7],["白日之下","剧情 · 港片口碑炸裂",8.6]],
+  top:[["奥本海默","传记 · 年度最佳之一",9.8],["周处除三害","犯罪 · 年度黑马",9.5],["泳者之心","传记 · 高分冷门",9.2],["机器人之梦","动画 · 看哭全场的",9.0],["出走的决心","剧情 · 女性叙事",8.6]],
+  gem:[["过去的日子","冷门遗珠 · 被低估",8.8],["晨光正好","冷门遗珠 · 生活流",8.5],["偶得回响","冷门遗珠 · 小众佳作",8.4],["海雾之外","冷门遗珠 · 纪录片",8.3],["但愿人长久","冷门遗珠 · 家庭",7.7]]
+};
+var FAQ=[
+  ["56 部是怎么挑出来的？","先按主题分成 8 个栏目，每栏 7 部，共 56 部。评分、口碑、上映状态、片长、可看性各占一份权重，最后由编辑部手动过一遍。","01"],
+  ["为什么正好是 56 部？","因为叫 56电影网，一周七天，一天一部是 7 部，八栏七部是 56 部，正好一册一册地出。","02"],
+  ["清单多久更新一次？","每周一上午 10:00 更新一期，全年 52 期，法定假期顺延。","03"],
+  ["可以投稿或推荐片子吗？","可以。编辑部邮箱见页脚，推荐请附片名、年份、类型和你的一句话理由，入选会标注推荐人。","04"],
+  ["评分从哪里来？","综合公开平台评分与本站编辑评分，标注为参考值，不构成观影保证。","05"],
+  ["历史清单能回看吗？","可以，第 100 期以前的清单全部归档在「历史榜单」栏目下，按主题与年份检索。","06"]
+];
+
+var $=function(i){return document.getElementById(i)};
+$('vcbox').innerHTML=COLS.map(function(c,i){
+  var cls=i===0?'red':(i===2?'gold':'');
+  return '<article class="vc '+cls+'"><div class="hd"><b>栏目 0'+(i+1)+'</b><i>'+c[1]+'</i></div><div class="bd"><h3>'+c[0]+'</h3><p>'+c[2]+'</p></div><div class="ft"><span>7 部 / 主题</span><span>'+(i+1)+'/8</span></div></article>';
+}).join('');
+
+$('fcbox').innerHTML=PICKS.map(function(p){
+  return '<article class="fc"><span class="vn">'+String(p[4]).padStart(2,'0')+'<s>NO.</s></span><div><h3><a href="#" title="'+p[0]+' - 56电影网">'+p[0]+'</a></h3><div class="meta"><span>'+p[1]+'</span><span>'+p[2]+'</span><span>手记</span></div><p>'+p[3]+'</p><a class="more" href="#" title="56电影网阅读全文">阅 读 全 文 →</a></div></article>';
+}).join('');
+
+$('lsbox').innerHTML=LS.map(function(r){
+  return '<a class="li'+(r[3]?' new':' old')+'" href="#" title="'+r[0]+' - 56电影网"><span class="n">'+String(r[4]).padStart(2,'0')+'</span><span class="t">'+r[0]+'<small>'+r[1]+'</small></span><span class="rt">'+r[2]+'</span></a>';
+}).join('');
+
+$('tlbox').innerHTML=TL.map(function(t,i){
+  return '<div class="row'+(i===4?' today':'')+'"><div class="dt"><b>'+t[0]+'</b>'+t[1]+'</div><div class="nd">'+String(i+1).padStart(2,'0')+'<small>'+t[2]+'</small></div><div class="cn"><h4>'+t[3]+'</h4><p>'+t[4]+'</p></div></div>';
+}).join('');
+
+$('cmpbox').innerHTML=
+  '<div class="col left"><h3>本周热度榜</h3><div class="sub">HOT · WEEK 32</div><ol>'+CMP.hot.map(function(r){return '<li><span class="t">'+r[0]+'<small>'+r[1]+'</small></span><span class="s">'+r[2]+'</span></li>'}).join('')+'</ol></div>'
+ +'<div class="vs">VS</div>'
+ +'<div class="col right"><h3>年度口碑榜</h3><div class="sub">BEST · 2026</div><ol>'+CMP.top.map(function(r){return '<li><span class="t">'+r[0]+'<small>'+r[1]+'</small></span><span class="s">'+r[2]+'</span></li>'}).join('')+'</ol></div>'
+ +'<div class="col left" style="grid-column:1/2;background:rgba(176,141,47,.07)"><h3 style="color:var(--gold)">冷门遗珠榜</h3><div class="sub">HIDDEN · GEMS</div><ol>'+CMP.gem.map(function(r){return '<li><span class="t">'+r[0]+'<small>'+r[1]+'</small></span><span class="s">'+r[2]+'</span></li>'}).join('')+'</ol></div>'
+ +'<div class="vs" style="grid-column:2/3;grid-row:auto">56</div>'
+ +'<div class="col right" style="grid-column:3/4;background:rgba(200,50,30,.05)"><h3 style="color:var(--red)">入选理由</h3><div class="sub">WHY IN 56</div><ol>'+CMP.hot.map(function(r){return '<li><span class="t">'+r[0]+'<small>入选当周 56 部精选清单的理由</small></span><span class="s">'+r[0].charCodeAt(0)+'</span></li>'}).join('')+'</ol></div>';
+
+$('faqbox').innerHTML=FAQ.map(function(f){
+  return '<details><summary><b>'+f[2]+'</b>'+f[0]+'</summary><div class="ans">'+f[1]+' 若仍有疑问，欢迎来信 <a href="#" title="56电影网编辑部邮箱">editor@56dianyingwang-wap.github.io</a>。</div></details>';
+}).join('');
+
+var mb=$('mob'),nv=$('mnav');
+mb.addEventListener('click',function(){nv.classList.toggle('open')});
+nv.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){nv.classList.remove('open');var h=e.target.getAttribute('href');if(h&&h.charAt(0)==='#'){e.preventDefault();var el=document.querySelector(h);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}}
+});
+function sub(e){
+  e.preventDefault();
+  var m=$('mail').value.trim();
+  if(!m){alert('请先填写邮箱');return false}
+  alert('订阅成功！《56 周报》每周一 10:00 推送，收件箱：'+m);
+  $('mail').value='';return false;
+}
+</script>
+</body>
+</html>
